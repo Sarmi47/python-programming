@@ -1,0 +1,14 @@
+with open(r"C:\Users\S SARMILA\Documents\New folder\copy.txt","r") as f:
+    c = f.read()
+print(c)
+characters = len(c)
+words = (c.replace("|"," ").split())
+m=0
+for i in words:
+    if i.isalpha():
+        m=m+1
+lines = len(c.splitlines())
+
+print("number of characters:", characters)
+print("number of words:", m)
+print("number of lines:", lines)
