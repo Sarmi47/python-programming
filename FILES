@@ -1,0 +1,21 @@
+update = input("Enter product ID: ")
+new = input("Enter new description: ")
+
+with open(r"C:\Users\S SARMILA\Documents\product_catalog.txt", "r") as file:
+    lines = file.readlines()
+
+updated_lines = []
+
+for line in lines:
+    data = line.strip().split("|")
+    
+    if data[0] == update:
+        data[2] = new
+        line = "|".join(data) + "\n"
+    
+    updated_lines.append(line)
+
+with open(r"C:\Users\S SARMILA\Documents\product_catalog.txt", "w") as file:
+    file.writelines(updated_lines)
+
+print("Product description updated successfully!")
