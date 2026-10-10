@@ -1,0 +1,22 @@
+class sharuu:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+class sub1(sharuu):
+    def ans1(self):
+        return f"The first person name is {self.name} and age is {self.age}"
+class sub2(sharuu):
+    def ans2(self):
+        return f"The second person name is {self.name} and age is {self.age}"
+name1 = input("Enter first person name: ")
+age1 = int(input("Enter first person age: "))
+h = sub1(name1, age1)
+name2 = input("Enter second person name: ")
+age2 = int(input("Enter second person age: "))
+j = sub2(name2, age2)
+
+print(h.ans1())
+print(j.ans2())
+
+
+
