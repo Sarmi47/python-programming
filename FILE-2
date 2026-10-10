@@ -1,0 +1,16 @@
+timestamp = input("Enter timestamp (YYYY-MM-DD HH:MM:SS): ")
+user_id = input("Enter user ID: ")
+comment = input("Enter feedback comment: ")
+
+with open("feedback.txt", "a") as f:
+    f.write(timestamp + "|" + user_id + "|" + comment + "\n")
+with open("feedback.txt", "r") as f:
+    lines = f.readlines()
+lines.sort(key=lambda x: x.split("|")[0])
+with open("feedback.txt", "w") as f:
+    f.writelines(lines)
+
+
+print("Feedback added and file sorted successfully!")
+
+
